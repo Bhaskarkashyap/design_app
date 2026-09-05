@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0A0A0F;
+  color: #ffffff;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #FF6B35, #C026D3, #9333EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-btn {
+  background: linear-gradient(90deg, #FF6B35, #C026D3, #9333EA);
+  transition: opacity 0.2s ease;
+}
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+.gradient-btn:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+.gradient-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.input-glow:focus-within {
+  box-shadow: 0 0 0 2px rgba(192, 38, 211, 0.3);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
